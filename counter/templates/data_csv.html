@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSV File Uploader</title>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+</head>
+<body>
+  <form>
+    <label for="csv-file">Select a CSV file:</label>
+    <input type="file" id="csv-file" name="csv-file" accept=".csv">
+    <button type="button" onclick="uploadFile()">Upload</button>
+  </form>
+
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyBnlkVFEHNelV_GhcrpqbzVfqBPLGjFeyc",
+        authDomain: "group4-aa935.firebaseapp.com",
+        projectId: "group4-aa935",
+        storageBucket: "group4-aa935.appspot.com",
+        messagingSenderId: "177994422199",
+        appId: "1:177994422199:web:a76376b425a18d4f91fa32",
+        measurementId: "G-CJJWK9Z2MZ"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the Firestore database
+    var db = firebase.firestore();
+
+    // Function to upload CSV file data to Firestore
+    function uploadFile() {
+      // Get the file input element
+      var input = document.getElementById('csv-file');
+      var file = input.files[0];
+      var reader = new FileReader();
+
+      // Read the file contents
+      reader.onload = function() {
+        // Parse the CSV data
+        var rows = reader.result.split('\n');
+        var data = [];
+
+        const date = new Date()
+
+        for (var i = 1; i < rows.length; i++) {
+          var row = rows[i].split(',');
+          var student = row[0];
+          console.log(student);
+
+          var food = row[0];
+
+          db.collection("Fe").doc(food).set({
+            Fe: row[1],
+          })
+        }
+      reader.readAsText(file);
+    }
+}
+  </script>
+</body>
+</html>

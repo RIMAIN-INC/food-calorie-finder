@@ -1,0 +1,100 @@
+body {
+  background-color: #f6fbf4;
+}
+
+.logo {
+  width: 5em;
+  height: 70px;
+} 
+
+h1 {
+  font-weight: 300;
+}
+
+h1 strong {
+  font-weight: 600;
+  color: #4b8673;
+}
+
+.inputstyle {
+  padding: 20px !important;
+}
+
+.whoop {
+  background-color: #34495E;
+  width: 8em;
+  font-size: 30px !important;
+  color: #ffffff;
+}
+
+.caloriescont {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.caloriescont ul {
+  padding: 0px;
+}
+
+.caloriescont ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  width: 80%;
+}
+
+.caloriescont h3 {
+  color: #4b8673;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.caloriescont h5 {
+  color: #4b8673;
+}
+
+.servingsize {
+  background-color: #000000;
+  padding: 10px;
+  color: #ffffff;
+}
+
+
+.bottom-right-container {
+  position: absolute;
+  bottom: 5;
+  right: 0;
+  width: 200px; 
+  height: 140px; 
+  background-color: #f1f1f1; 
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.list {
+  list-style-type: none; /* Removes default list styling */
+  margin: 0;
+  padding: 0;
+  position: absolute; /* Makes the list position relative to its parent */
+  width: 100%; /* Match the width of the search bar */
+  /* You may also want to adjust the top and left properties to align it just below your search bar */
+  top: 100%; /* Example value, adjust as needed */
+  left: 0; /* Align with the left edge of the parent container */
+  z-index: 1; /* Ensures the list appears on top of other elements */
+  background-color: #fff; /* Optional: Sets background color of the list */
+  border: 1px solid #ddd; /* Optional: Adds a border to the list */
+  border-top: none; /* Optional: Removes the top border */
+}
+
+.list-items {
+  /* Style for individual list items */
+  padding: 10px; /* Adds some padding inside each list item */
+  cursor: pointer; /* Changes cursor on hover */
+  border-bottom: 1px solid #ddd; /* Optional: Adds a bottom border to each item */
+}
+
+.list-items:hover {
+  background-color: #f5f5f5; /* Optional: Changes background on hover */
+}

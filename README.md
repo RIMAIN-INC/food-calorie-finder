@@ -1,2 +1,2 @@
-# group4
-developing a know my diet application
+# Foodie-calorie-finder
+ Allows you to find colries in your food
